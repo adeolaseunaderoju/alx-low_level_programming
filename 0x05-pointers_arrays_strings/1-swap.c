@@ -1,22 +1,16 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
- * _puts - prints a string
- * @str: string to print
- *
- * Description: prints a string
- * On success: returns no error
+ * swap_int - swaps two integers' values
+ * @a: first integer
+ * @b: second integer
+ * Return: returns nothing
  */
 
-void _puts(char *str)
+void swap_int(int *a, int *b)
 {
-	int i = 0;
+	int tmp = *a;
 
-	while (*(str + i) != '\0')
-	{
-		putchar(*(str + i));
-		i++;
-	}
-	putchar(10);
+	*a = *b;
+	*b = tmp;
 }
